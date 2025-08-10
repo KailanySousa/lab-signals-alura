@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SignalsIntroComponent } from './signals-intro/signals-intro.component';
-import { EffetcsComponent } from './effetcs/effetcs.component';
+import { SignalsIntroComponent } from './components/signals-intro/signals-intro.component';
+import { EffetcsComponent } from './components/effetcs/effetcs.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'elements', pathMatch: 'full' },
