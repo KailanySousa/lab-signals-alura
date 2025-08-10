@@ -28,8 +28,8 @@ li {
   border: 1px solid #e8e8e4;
   border-radius: 12px;
   transition: background-color 0.3s ease;
+  z-index: 1;
 }
-
 
 p {
   font-size: 1.2rem;
