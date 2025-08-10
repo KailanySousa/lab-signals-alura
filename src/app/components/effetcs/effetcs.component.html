@@ -1,22 +1,27 @@
 <h2>Simulação de Estado Físico</h2>
 <ul>
-  <li *ngFor="let elemento of elementos" (click)="selecionarElemento(elemento)">
-    {{ elemento.nome }} ({{ elemento.simbolo }})
+  <li
+    *ngFor="let elemento of elementoService.elementos"
+    (click)="selecionarElemento(elemento)"
+  >
+    {{ elemento.nome }} ({{ elemento?.simbolo }})
   </li>
 </ul>
 
-<div *ngIf="elementoSelecionado()" class="selection">
+<div *ngIf="elementoService.elementoSelecionado()" class="selection">
   <div class="elements">
-    <p>Elemento Selecionado: {{ elementoSelecionado()?.nome }}</p>
+    <p>
+      Elemento Selecionado: {{ elementoService.elementoSelecionado()?.nome }}
+    </p>
   </div>
   <div class="temperature">
-    <p>Temperatura Atual: {{ temperatura() }}°C</p>
-    <button (click)="ajustarTemperatura(temperatura() + 10)">
+    <p>Temperatura Atual: {{ elementoService.temperatura() }}°C</p>
+    <button (click)="ajustarTemperatura(elementoService.temperatura() + 10)">
       Aumentar Temperatura
     </button>
-    <button (click)="ajustarTemperatura(temperatura() - 10)">
+    <button (click)="ajustarTemperatura(elementoService.temperatura() - 10)">
       Diminuir Temperatura
     </button>
   </div>
-  <p>Estado Físico: {{ estadoFisico() }}</p>
+  <p>Estado Físico: {{ elementoService.estadoFisico() }}</p>
 </div>

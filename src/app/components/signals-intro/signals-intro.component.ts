@@ -1,5 +1,6 @@
-import { Component, computed, signal } from '@angular/core';
-import Elemento, { ELEMENTOS } from './signals-intro.const';
+import { Component } from '@angular/core';
+import Elemento from 'src/app/services/elemento/elemento.interface';
+import { ElementoService } from 'src/app/services/elemento/elemento.service';
 
 @Component({
   selector: 'app-signals-intro',
@@ -7,19 +8,9 @@ import Elemento, { ELEMENTOS } from './signals-intro.const';
   styleUrls: ['./signals-intro.component.css'],
 })
 export class SignalsIntroComponent {
-  elementoSelecionado = signal<Elemento | null>(null);
-
-  elementos: Elemento[] = ELEMENTOS;
+  constructor(readonly elementoService: ElementoService) {}
 
   selecionarElemento(elemento: Elemento) {
-    this.elementoSelecionado.set(elemento);
+    this.elementoService.selecionarElemento(elemento);
   }
-
-  // sinal computado: valores derivados de outros sinais
-  elementoInfo = computed(() => {
-    const elemento = this.elementoSelecionado();
-    return elemento
-      ? `Nome: ${elemento.nome}, Símbolo: ${elemento.simbolo}, Número de massa: ${elemento.numeroMassa}`
-      : 'Nenhum elemento selecionado';
-  });
 }
