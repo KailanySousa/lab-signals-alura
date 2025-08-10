@@ -5,7 +5,7 @@ import { ElementoService } from 'src/app/services/elemento/elemento.service';
 @Component({
   selector: 'app-element-list',
   templateUrl: './element-list.component.html',
-  styleUrl: './element-list.component.css',
+  styleUrls: ['./element-list.component.css'],
 })
 export class ElementListComponent {
   constructor(readonly elementoService: ElementoService) {}
