@@ -5,9 +5,17 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SignalsIntroComponent } from './components/signals-intro/signals-intro.component';
 import { EffetcsComponent } from './components/effetcs/effetcs.component';
+import { ElementListComponent } from './components/element-list/element-list.component';
+import { ElementDetailsComponent } from './components/element-details/element-details.component';
 
 @NgModule({
-  declarations: [AppComponent, SignalsIntroComponent, EffetcsComponent],
+  declarations: [
+    AppComponent,
+    SignalsIntroComponent,
+    EffetcsComponent,
+    ElementListComponent,
+    ElementDetailsComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
