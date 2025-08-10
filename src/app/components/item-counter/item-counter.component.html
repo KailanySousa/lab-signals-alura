@@ -1,0 +1,22 @@
+<div class="container">
+  <h2>Carrinho de Reagentes Químicos</h2>
+  <p>Total de reagentes no carrinho: {{ totalItems() }}</p>
+
+  <div class="products">
+    <h3>Selecione um reagente para adicionar ao carrinho:</h3>
+    <ul>
+      <li *ngFor="let item of availableItems" (click)="addItem(item)">
+        {{ item }}
+      </li>
+    </ul>
+  </div>
+
+  <div class="cart-items">
+    <h3>Reagentes no carrinho:</h3>
+    <ul>
+      <li *ngFor="let item of items(); let i = index" (click)="removeItem(i)">
+        {{ item }}
+      </li>
+    </ul>
+  </div>
+</div>
