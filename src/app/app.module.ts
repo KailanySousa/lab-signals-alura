@@ -9,6 +9,8 @@ import { ElementListComponent } from './components/element-list/element-list.com
 import { ElementDetailsComponent } from './components/element-details/element-details.component';
 import { ComputedSignalComponent } from './components/computed-signal/computed-signal.component';
 import { ElementsComponent } from './components/elements/elements.component';
+import { ClickCounterComponent } from './components/click-counter/click-counter.component';
+import { ItemCounterComponent } from './components/item-counter/item-counter.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { ElementsComponent } from './components/elements/elements.component';
     ElementDetailsComponent,
     ComputedSignalComponent,
     ElementsComponent,
+    ClickCounterComponent,
+    ItemCounterComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

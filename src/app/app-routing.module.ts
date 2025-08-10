@@ -5,6 +5,8 @@ import { EffetcsComponent } from './components/effetcs/effetcs.component';
 import { ElementListComponent } from './components/element-list/element-list.component';
 import { ElementDetailsComponent } from './components/element-details/element-details.component';
 import { ComputedSignalComponent } from './components/computed-signal/computed-signal.component';
+import { ClickCounterComponent } from './components/click-counter/click-counter.component';
+import { ItemCounterComponent } from './components/item-counter/item-counter.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'elements', pathMatch: 'full' },
@@ -18,6 +20,8 @@ const routes: Routes = [
     ],
   },
   { path: 'computed-signal', component: ComputedSignalComponent },
+  { path: 'click-counter', component: ClickCounterComponent },
+  { path: 'item-counter', component: ItemCounterComponent },
 ];
 
 @NgModule({
