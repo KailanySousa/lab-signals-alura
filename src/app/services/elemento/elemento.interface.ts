@@ -4,4 +4,6 @@ export default interface Elemento {
   numeroMassa: number;
   pontoFusao: number;
   pontoEbulicao: number;
+  numeroNeutrons: number;
+  numeroAtomico: number;
 }
