@@ -10,7 +10,7 @@ import { ElementoService } from 'src/app/services/elemento/elemento.service';
 export class ElementListComponent {
   constructor(readonly elementoService: ElementoService) {}
 
-  alternarFavorito(elemento: Elemento) {
+  toggleFavorito(elemento: Elemento) {
     const isFavorito = this.elementoService.favoritos().includes(elemento);
     if (isFavorito) {
       this.elementoService.removerFavorito(elemento);

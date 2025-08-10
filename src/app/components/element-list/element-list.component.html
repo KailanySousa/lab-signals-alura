@@ -2,8 +2,7 @@
 <ul>
   <li *ngFor="let elemento of elementoService.elementos">
     {{ elemento.nome }} ({{ elemento.simbolo }})
-
-    <button (click)="alternarFavorito(elemento)">
+    <button (click)="toggleFavorito(elemento)">
       <span *ngIf="elementoService.obterFavoritos().includes(elemento)">
         <i class="fa-solid fa-star"></i>
       </span>
