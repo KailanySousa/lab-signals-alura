@@ -137,6 +137,9 @@ export class ElementoService {
   massaAtomicaTotal = computed(() => {
     const elemento1 = this.elementoCalculado1();
     const elemento2 = this.elementoCalculado2();
+
+    // untracked permite acessar um valor ou executar uma lógica sem rastrear automaticamente suas dependências no contexto de um signal computado ou um effect
+    //  é útil em cenários onde você quer acessar um dado específico sem desencadear uma reatividade
     const massa1 = untracked(() =>
       elemento1 ? elemento1.numeroAtomico + elemento1.numeroNeutrons : 0
     );
