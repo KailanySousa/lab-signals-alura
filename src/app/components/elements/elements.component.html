@@ -1,0 +1,8 @@
+<ul>
+  <li
+    *ngFor="let elemento of elementoService.elementos"
+    (click)="selecionarElemento(elemento)"
+  >
+    {{ elemento.nome }} ({{ elemento?.simbolo }})
+  </li>
+</ul>

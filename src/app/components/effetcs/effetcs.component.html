@@ -1,12 +1,5 @@
 <h2>Simulação de Estado Físico</h2>
-<ul>
-  <li
-    *ngFor="let elemento of elementoService.elementos"
-    (click)="selecionarElemento(elemento)"
-  >
-    {{ elemento.nome }} ({{ elemento?.simbolo }})
-  </li>
-</ul>
+<app-elements></app-elements>
 
 <div *ngIf="elementoService.elementoSelecionado()" class="selection">
   <div class="elements">

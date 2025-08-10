@@ -8,6 +8,7 @@ import { EffetcsComponent } from './components/effetcs/effetcs.component';
 import { ElementListComponent } from './components/element-list/element-list.component';
 import { ElementDetailsComponent } from './components/element-details/element-details.component';
 import { ComputedSignalComponent } from './components/computed-signal/computed-signal.component';
+import { ElementsComponent } from './components/elements/elements.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ComputedSignalComponent } from './components/computed-signal/computed-s
     ElementListComponent,
     ElementDetailsComponent,
     ComputedSignalComponent,
+    ElementsComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
