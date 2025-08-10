@@ -7,6 +7,7 @@ import { SignalsIntroComponent } from './components/signals-intro/signals-intro.
 import { EffetcsComponent } from './components/effetcs/effetcs.component';
 import { ElementListComponent } from './components/element-list/element-list.component';
 import { ElementDetailsComponent } from './components/element-details/element-details.component';
+import { ComputedSignalComponent } from './components/computed-signal/computed-signal.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { ElementDetailsComponent } from './components/element-details/element-de
     EffetcsComponent,
     ElementListComponent,
     ElementDetailsComponent,
+    ComputedSignalComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

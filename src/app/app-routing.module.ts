@@ -4,6 +4,7 @@ import { SignalsIntroComponent } from './components/signals-intro/signals-intro.
 import { EffetcsComponent } from './components/effetcs/effetcs.component';
 import { ElementListComponent } from './components/element-list/element-list.component';
 import { ElementDetailsComponent } from './components/element-details/element-details.component';
+import { ComputedSignalComponent } from './components/computed-signal/computed-signal.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'elements', pathMatch: 'full' },
@@ -16,6 +17,7 @@ const routes: Routes = [
       { path: '', component: ElementDetailsComponent, outlet: 'details' },
     ],
   },
+  { path: 'computed-signal', component: ComputedSignalComponent },
 ];
 
 @NgModule({
