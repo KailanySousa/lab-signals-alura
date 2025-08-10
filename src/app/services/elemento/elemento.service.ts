@@ -8,6 +8,7 @@ export class ElementoService {
   elementoSelecionado = signal<Elemento | null>(null);
   temperatura = signal<number>(25);
   estadoFisico = signal<string>('');
+  favoritos = signal<Elemento[]>([]);
 
   elementos: Elemento[] = [
     {
@@ -99,5 +100,23 @@ export class ElementoService {
 
   ajustarTemperatura(temperatura: number) {
     this.temperatura.set(temperatura);
+  }
+
+  obterFavoritos() {
+    return this.favoritos();
+  }
+
+  obterElementoSelecionado() {
+    return this.elementoSelecionado();
+  }
+
+  adicionarFavorito(elemento: Elemento) {
+    this.favoritos.update((favoritos) => [...favoritos, elemento]);
+  }
+
+  removerFavorito(elemento: Elemento) {
+    this.favoritos.update((favoritos) =>
+      favoritos.filter((fav) => fav !== elemento)
+    );
   }
 }
