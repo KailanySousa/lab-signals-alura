@@ -13,11 +13,7 @@ const routes: Routes = [
     path: 'elements',
     children: [
       { path: '', component: ElementListComponent, outlet: 'list' },
-      {
-        path: 'details',
-        component: ElementDetailsComponent,
-        outlet: 'details',
-      },
+      { path: '', component: ElementDetailsComponent, outlet: 'details' },
     ],
   },
 ];
